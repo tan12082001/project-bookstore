@@ -1,6 +1,10 @@
+import AddBook from './addbook-form';
+import BooksList from './books-list';
+
 const Books = () => (
-  <div className="books-outer">
-    <h2>Books page testing</h2>
+  <div className="books-page">
+    <BooksList />
+    <AddBook />
   </div>
 );
 
