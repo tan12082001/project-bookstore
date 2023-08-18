@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import EachBook from './each-book';
+import AddBook from './addbook-form';
 
 const BooksList = () => {
   const examplebooks = [
@@ -27,12 +28,24 @@ const BooksList = () => {
     }));
     setBooks(updatedBooks);
   };
+  const addBook = (title, author) => {
+    const newBook = {
+      id: books.length + 1,
+      title,
+      author,
+    };
+    setBooks([...books, newBook]);
+  };
   return (
-    <div className="books-list">
-      {books.map((book) => (
-        <EachBook key={book.id} book={book} deleteBook={deleteBook} />
-      ))}
-    </div>
+    <>
+      <div className="books-list">
+        {books.map((book) => (
+          <EachBook key={book.id} book={book} deleteBook={deleteBook} />
+        ))}
+      </div>
+      <AddBook addBook={addBook} />
+    </>
+
   );
 };
 
