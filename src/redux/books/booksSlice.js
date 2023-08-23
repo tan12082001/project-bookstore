@@ -1,7 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  books: [],
+  ibooks: [
+    {
+      id: 99,
+      title: 'tanu',
+      author: 'lover',
+    },
+    {
+      id: 100,
+      title: 'dekku',
+      author: 'mine',
+    },
+  ],
 };
 
 const booksSlice = createSlice({
@@ -20,6 +31,8 @@ const booksSlice = createSlice({
     },
   },
 });
+
+console.log(booksSlice);
 
 export const { addBook, removeBook } = booksSlice.actions;
 export default booksSlice.reducer;

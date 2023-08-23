@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import EachBook from './each-book';
 import AddBook from './addbook-form';
@@ -36,10 +37,12 @@ const BooksList = () => {
     };
     setBooks([...books, newBook]);
   };
+  const testbooks = useSelector((state) => state.books.ibooks);
+  console.log(testbooks);
   return (
     <>
       <div className="books-list">
-        {books.map((book) => (
+        {testbooks.map((book) => (
           <EachBook key={book.id} book={book} deleteBook={deleteBook} />
         ))}
       </div>
