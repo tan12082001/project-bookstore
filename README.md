@@ -11,7 +11,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started with Create React App](#getting-started-with-create-react-app)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -56,16 +55,6 @@
 - **Can add new book to the store and display all books**
 
 - **Can delete an existing book from the display**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo
-
- <a name="live-demo"></a>
-
-- [Will provide the link once there is a deployment of the webservice.]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
