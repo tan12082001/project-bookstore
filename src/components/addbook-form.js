@@ -1,13 +1,22 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { addBook } from '../redux/books/booksSlice';
+import Button from './button-handle';
 
-const AddBook = ({ addBook }) => {
+const AddBook = () => {
+  const dispatch = useDispatch();
+  const booksnumber = useSelector((state) => state.books.books);
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title !== '' && author !== '') {
-      addBook(title, author);
+      const newBook = {
+        item_id: `item${booksnumber.length + 1}`,
+        title,
+        author,
+      };
+      dispatch(addBook(newBook));
       setTitle('');
       setAuthor('');
     }
@@ -15,7 +24,7 @@ const AddBook = ({ addBook }) => {
   return (
     <div>
       <h2>ADD NEW BOOK</h2>
-      <form onSubmit={handleSubmit}>
+      <form>
         <div className="form-parts">
           <label htmlFor="book-name">
             <input
@@ -41,15 +50,11 @@ const AddBook = ({ addBook }) => {
           </label>
         </div>
         <div className="form-parts">
-          <button type="submit" id="add-book">ADD BOOK</button>
+          <Button className="add-book" toAddRemove="ADD BOOK" clickHandle={handleSubmit} />
         </div>
       </form>
     </div>
   );
-};
-
-AddBook.propTypes = {
-  addBook: PropTypes.func.isRequired,
 };
 
 export default AddBook;
