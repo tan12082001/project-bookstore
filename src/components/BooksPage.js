@@ -1,4 +1,4 @@
-import BooksList from './books-list';
+import BooksList from './BooksList';
 
 const Books = () => (
   <div className="books-page">

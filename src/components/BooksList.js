@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import EachBook from './each-book';
-import AddBook from './addbook-form';
+import EachBook from './EachBook';
+import AddBook from './AddBookForm';
 
 const BooksList = () => {
   const testbooks = useSelector((state) => state.books.books);
