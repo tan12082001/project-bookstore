@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/booksSlice';
-import Button from './button-handle';
+import Button from './ButtonHandle';
 
 const EachBook = ({ book }) => {
   const dispatch = useDispatch();
