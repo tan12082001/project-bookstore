@@ -1,24 +1,29 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/books/booksSlice';
+import { postBook } from '../redux/books/booksSlice';
 import Button from './ButtonHandle';
 
 const AddBook = () => {
-  const dispatch = useDispatch();
-  const booksnumber = useSelector((state) => state.books.books);
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
+
+  const dispatch = useDispatch();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title !== '' && author !== '') {
       const newBook = {
-        item_id: `item${booksnumber.length + 1}`,
+        item_id: uuidv4(),
         title,
         author,
+        category,
       };
-      dispatch(addBook(newBook));
+      dispatch(postBook(newBook));
       setTitle('');
       setAuthor('');
+      setCategory('');
     }
   };
   return (
@@ -45,6 +50,18 @@ const AddBook = () => {
               placeholder="Book Author"
               value={author}
               onChange={(e) => setAuthor(e.target.value)}
+              required
+            />
+          </label>
+        </div>
+        <div className="form-parts">
+          <label htmlFor="book-category">
+            <input
+              id="book-category"
+              type="text"
+              placeholder="Book Category"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
               required
             />
           </label>
