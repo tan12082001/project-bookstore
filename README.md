@@ -11,6 +11,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started with Create React App](#getting-started-with-create-react-app)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -55,6 +56,18 @@
 - **Can add new book to the store and display all books**
 
 - **Can delete an existing book from the display**
+
+- **Uses React Redux middleware to work with async functions for API interactions"
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo
+
+ <a name="live-demo"></a>
+
+- [Project Bookstore with Render](https://github.com/tan12082001/project-bookstore)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,9 +212,9 @@ This Projects live demo will be deployed using [Render](https://render.com/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Apply more styles for the page**
+- [ ] **Apply more styles for the Books page**
 
-- [ ] **Make use of Free source API to get content for home page**
+- [ ] **Construct the categories page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
