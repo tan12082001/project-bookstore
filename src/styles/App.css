@@ -1,3 +1,143 @@
-h1 {
-  color: aqua;
+:root {
+  --white-three: #e8e8e8;
+}
+
+.books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+}
+
+.category,
+.title,
+.author,
+.comments,
+.delete-book,
+.edit,
+h2,
+#book-name::placeholder,
+#book-author::placeholder,
+#book-category::placeholder,
+.add-book {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.book-outer {
+  width: 100%;
+  padding: 2rem 1.688rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px var(--white-three);
+  background-color: #fff;
+  display: flex;
+}
+
+.first-part {
+  display: flex;
+  flex-direction: column;
+  gap: 1.313rem;
+  width: 50%;
+}
+
+.category {
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.title {
+  margin: 0.188rem 12.188rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.author {
+  margin: 0.25rem 0 0;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.comments,
+.delete-book,
+.edit {
+  background: none;
+  border: none;
+  outline: none;
+  border-right: 1px solid var(--white-three);
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  padding-right: 2.001rem;
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.add-book-form {
+  border-top: 1px solid var(--white-three);
+  padding-bottom: 16.563rem;
+}
+
+h2 {
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: var(--font-family);
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+form {
+  display: flex;
+  gap: 2.125rem;
+  justify-content: space-between;
+}
+
+.form-parts {
+  width: 100%;
+  border-radius: 4px;
+  border: solid 1px var(--white-three);
+  background-color: #fff;
+}
+
+#book-name::placeholder,
+#book-author::placeholder,
+#book-category::placeholder,
+.add-book {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  text-align: center;
+}
+
+#book-name,
+#book-author,
+#book-category,
+.add-book {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.813rem 1.063rem;
+}
+
+.add-book {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
 }
