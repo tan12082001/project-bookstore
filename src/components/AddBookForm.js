@@ -27,7 +27,7 @@ const AddBook = () => {
     }
   };
   return (
-    <div>
+    <div className="add-book-form">
       <h2>ADD NEW BOOK</h2>
       <form>
         <div className="form-parts">
